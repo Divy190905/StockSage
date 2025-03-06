@@ -1,0 +1,10 @@
+yfinance
+praw
+groq
+pandas
+numpy
+matplotlib
+scikit-learn
+torch
+requests
+gradio
