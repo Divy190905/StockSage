@@ -4,7 +4,7 @@ from collections import Counter
 from groq import Groq
 
 # Initialize the Groq API client
-client = Groq(api_key="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")
+client = Groq(api_key="YOUR_GROQ_API_KEY")
 
 def fetch_news(stock_name=None):
     news_api_key = '3a75f8781761465da09403ccbe14a19f'
