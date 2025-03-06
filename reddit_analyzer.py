@@ -5,12 +5,12 @@ import time
 import traceback
 
 # Initialize the Groq API client
-client = Groq(api_key="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")
+client = Groq(api_key="YOUR_GROQ_API_KEY")
 
 # Set up Reddit API credentials
-REDDIT_CLIENT_ID = 'IhrERBkIZvPfgwBPaeYSPQ'
-REDDIT_SECRET = 'uIbFlDxKHSFGjWp_Ussk3qc1mY0d2Q'
-REDDIT_USER_AGENT = 'my_stock_sentiment_bot v1.0'
+REDDIT_CLIENT_ID = 'YOUR_CLIENT_ID'
+REDDIT_SECRET = 'YOUR_SECRET_KEY'
+REDDIT_USER_AGENT = 'YOUR_AGENT_NAME'
 
 # Define sector keywords
 SECTOR_KEYWORDS = {
