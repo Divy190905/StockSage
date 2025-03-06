@@ -25,7 +25,7 @@ StockSage is a comprehensive stock analysis platform with an intuitive web inter
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/StockSage.git
+   git clone https://github.com/Divy190905/StockSage.git
    cd StockSage
    ```
 
@@ -72,9 +72,7 @@ The application provides:
 - Some less popular stocks may have limited data available for analysis
 - The prediction model works best for stocks with consistent trading history
 
-## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgments
 
