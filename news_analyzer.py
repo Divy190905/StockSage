@@ -7,8 +7,8 @@ from groq import Groq
 client = Groq(api_key="YOUR_GROQ_API_KEY")
 
 def fetch_news(stock_name=None):
-    news_api_key = '3a75f8781761465da09403ccbe14a19f'
-    news_base_url = 'https://newsapi.org/v2/everything'
+    news_api_key = 'YOUR_NEWS_API_KEY'
+    news_base_url = 'YOUR_URL'
     params = {
         'apiKey': news_api_key,
         'language': 'en',
