@@ -307,26 +307,24 @@ def predict_stock_prices(ticker):
         else:
             plt.plot(data.index, data['Close'], label='Historical Prices', color='blue')
         
-        # Plot the forecast
+        # Plot the forecast - keep only the red line without price annotations
         plt.plot(future_dates, forecast, label='30-Day Forecast', color='red', linewidth=2)
         
-        # Add current price and forecast end price
-        current_price = data['Close'].iloc[-1]
-        forecast_end_price = forecast[-1][0]
-        price_change = forecast_end_price - current_price
-        pct_change = (price_change / current_price) * 100
-        
-        # Add annotations
+        # Add vertical line to mark the separation between historical and forecast
         plt.axvline(x=last_date, color='gray', linestyle='--', alpha=0.7)
-        plt.text(last_date, current_price, f' Current: ${current_price:.2f}', 
-                 verticalalignment='bottom')
-        plt.text(future_dates[-1], forecast_end_price, 
-                 f' Forecast: ${forecast_end_price:.2f} ({pct_change:+.2f}%)', 
+        
+        # Calculate the percentage change but don't display exact prices
+        current_price = float(data['Close'].iloc[-1])
+        forecast_end_price = forecast[-1][0]
+        pct_change = ((forecast_end_price - current_price) / current_price) * 100
+        
+        # Add a simple trend indicator without exact prices
+        plt.text(future_dates[-1], forecast[-1][0], f' ({pct_change:+.2f}%)', 
                  verticalalignment='bottom', color='darkred')
         
         plt.title(f'{ticker} Stock Price 30-Day Forecast')
         plt.xlabel('Date')
-        plt.ylabel('Price ($)')
+        plt.ylabel('Price')  # Removed $ symbol
         plt.grid(True, alpha=0.3)
         plt.legend()
         plt.tight_layout()
